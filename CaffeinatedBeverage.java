@@ -4,10 +4,25 @@ public class CaffeinatedBeverage
     private int ounces;
     private double price;
 
+    // Default Constructor
+    public CaffeinatedBeverage() {
+        this.name = "";
+        this.ounces = 0;
+        this.price = 0.0;
+    }
+
+    // Parameterized Constructor
     public CaffeinatedBeverage(String name, int ounces, double price) {
         setName(name);
         setOunces(ounces);
         setPrice(price);
+    }
+
+    // Copy Constructor
+    public CaffeinatedBeverage(CaffeinatedBeverage other) {
+        this.name = other.name;
+        this.ounces = other.ounces;
+        this.price = other.price;
     }
 
     public String getName() {
