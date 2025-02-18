@@ -1,7 +1,7 @@
 public class Tea extends CaffeinatedBeverage {
     private int brewTemp;
 
-    Tea(String name, int ounces, double price, int brewTemp) {
+    public Tea(String name, int ounces, double price, int brewTemp) {
         super(name, ounces, price);
         this.brewTemp = brewTemp;
     }
@@ -12,6 +12,10 @@ public class Tea extends CaffeinatedBeverage {
 
     public void setBrewTemp(int brewTemp) {
         this.brewTemp = brewTemp;
+    }
+
+    public Tea(Tea other) {
+        this(other.getName(), other.getOunces(), other.getPrice(), other.getBrewTemp());
     }
 
     @Override
