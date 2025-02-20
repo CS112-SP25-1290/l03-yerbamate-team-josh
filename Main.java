@@ -15,7 +15,8 @@ public class Main
 		{
 			System.out.println("1) Enter new Tea");
 			System.out.println("2) Enter new Yerba Mate");
-			System.out.println("3) Exit");
+			System.out.println("3) Enter new Energy Drink");
+			System.out.println("4) Exit");
 			System.out.print(">>");
 			choice = keyboard.nextInt();
 			
@@ -23,7 +24,7 @@ public class Main
 			{
 			    case 1: // Tea
 					System.out.print("Enter name      : ");
-					name = keyboard.nextLine();
+					name = keyboard.next();
 					System.out.print("Enter ounces    : ");
 					ounces = keyboard.nextInt();
 					System.out.print("Enter price     $ ");

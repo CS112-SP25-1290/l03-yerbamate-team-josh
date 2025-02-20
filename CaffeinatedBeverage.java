@@ -11,7 +11,6 @@ public class CaffeinatedBeverage
         this.price = 0.0;
     }
 
-    // Parameterized Constructor
     public CaffeinatedBeverage(String name, int ounces, double price) {
         setName(name);
         setOunces(ounces);
