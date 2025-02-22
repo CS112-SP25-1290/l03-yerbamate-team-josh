@@ -14,7 +14,8 @@ public class Main
 		do {
 			System.out.println("1) Enter new Tea");
 			System.out.println("2) Enter new Yerba Mate");
-			System.out.println("3) Exit");
+			System.out.println("3) Enter new Energy Drink");
+			System.out.println("4) Exit");
 			System.out.print(">>");
 			choice = keyboard.nextInt();
 
@@ -52,6 +53,20 @@ public class Main
 					count++;
 					break;
 				case 3:
+					System.out.print("Enter energy drink name: ");
+					name = keyboard.next();
+					System.out.print("Enter ounces: ");
+					ounces = keyboard.nextInt();
+					System.out.print("Enter price: ");
+					price = keyboard.nextDouble();
+					System.out.print("Enter caffeine content (mg): ");
+					int caffeineMg = keyboard.nextInt();
+
+					inventory[count] = new EnergyDrink(name, ounces, price, caffeineMg);
+                    System.out.println("Your energy drink order has been added: " + inventory[count]);
+                    count++;
+                    break;
+				case 4:
 					// print array
 					for (CaffeinatedBeverage c : inventory) {
 						if (c == null) {
@@ -64,7 +79,7 @@ public class Main
 					System.out.println("Average cost: " + findAveragePrice(inventory));
 			}
 
-		} while (choice != 3);
+		} while (choice != 4);
 	}
 
 	public static double findAveragePrice(CaffeinatedBeverage[] inventory) {
